@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style>
+		div{
+			border: 1px solid #000;
+			margin: 20px;
+			padding: 20px;
+		}
+		.box2{
+			position: relative;
+		}
+		.box3{
+			/* position: static; 静态定位*/
+			/* position: relative; 相对定位*/
+			/* position: absolute; /* 绝对定位*/ 
+			position: fixed;固定定位
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		Box1-1
+		<div class="box2">
+			Box2-1
+			<div class="box3">Box3</div>
+			Box2-2
+		</div>
+		Box1-2
+	</div>
+</body>
+</html>
+	
