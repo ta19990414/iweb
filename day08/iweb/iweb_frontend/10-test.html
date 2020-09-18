@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style>
+		div{
+			border: 1px solid #000;
+		}
+		.parent{
+			height: 300px;
+			width: 700px;
+		}
+		.child1,.child2,.child3{
+			width:300px;
+			height:100px;/* 1.child1和child2等高 */
+			float:left;
+		}
+		.child1{
+			height:110px;;/* 2.child1比child2高 */
+		}
+		.child2{
+			height:120px;/* 3.child1比child2低 */
+		}
+		.child3{
+			height:120px;
+		}
+	</style>
+</head>
+<body>
+	<h4>浮动布局的特殊布局1</h4>
+	<div class="parent">
+		<div class="child1">c1</div>
+		<div class="child2">c2</div>
+		<div class="child3">c3</div>
+	</div>
+	<h4>浮动布局的特殊布局2</h4>
+</body>
+</html>
