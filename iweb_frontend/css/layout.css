@@ -6,8 +6,14 @@
 	margin-right: auto;
 	border: 1px solid #000;   /*测试用*/
 }
+.container-fluid{
+	display: block;
+	width: 100%;
+}
 .container:before,	/*使用内容生成，防止子元素margin溢出*/
-.container:after {
+.container:after,
+.container-fluid:before,
+.container-fluid:after{
 	content: '';
 	display: table;
 }
@@ -46,17 +52,37 @@ PAD:  medium - md
 PHONE:  small - sm
 */
 /*row表示布局中的一行*/
+.row{
+	margin-left: -1em;
+	margin-right: -1em; /* 抵消最右侧的列的padding-right */
+}
 /*在行的尾部生成一个新儿子，清除其它列由于浮动导致的行高坍塌问题*/
 .row:after {	  
 	content: '';
 	display: block;
 	clear: both;
 }
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-	float: left;  /*浮动之后两个列才能处于同一行中*/        
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-5-1, .col-lg-5-2, .col-lg-5-3, .col-lg-5-4, .col-lg-5-5{
+	float: left;  /*浮动之后两个列才能处于同一行中*/  
+	padding: 0 1em ;     /* 为所有的列添加lem的横向留白,形成2em的槽宽 */
 } 
 /* 在PC屏幕下每个列的宽度 */
 @media screen and (min-width: 1024px) {
+	.col-lg-5-1{
+		width: 20%;
+	}
+	.col-lg-5-2{
+		width: 40%;
+	}
+	.col-lg-5-3{
+		width: 60%;
+	}
+	.col-lg-5-4{
+		width: 80%;
+	}
+	.col-lg-5-5{
+		width: 100%;
+	}
 	.col-lg-1 {
 		width: 8.3333333333%;  /* 1/12 */
 	}

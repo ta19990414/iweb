@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				border: 1px solid #000000;
+				width: 700px;
+				white-space: nowrap;     /* 空白部分放不下更多元素也不换行 */
+				overflow-x: scroll;/* 水平方向强制呈现滚动条 */
+				overflow-x: auto;/* 当水平方向内容溢出时滚动,无溢出时不显示 */
+			}
+			.box img{
+				width: 300px;
+				height: 200px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/banner01.jpg">
+			<img src="img/banner01.jpg">
+			<img src="img/banner01.jpg">
+			<img src="img/banner01.jpg">
+		</div>
+	</body>
+</html>
